@@ -3,7 +3,11 @@ import 'package:career_guidance/widget/theme.dart';
 import 'package:flutter/material.dart';
 
 class CGCard {
-  static Widget getOptionCard({double? height, String? text, IconData? icon}) =>
+  static Widget getOptionCard(
+          {double? height,
+          String? text,
+          IconData? icon,
+          Function()? onPressed}) =>
       Expanded(
         child: Container(
           height: height!,
@@ -35,7 +39,7 @@ class CGCard {
                 child: InkWell(
                   borderRadius: const BorderRadius.all(Radius.circular(3)),
                   splashColor: CGTheme.accentColor.withOpacity(0.3),
-                  onTap: () {},
+                  onTap: onPressed!,
                 ),
               )
             ],
