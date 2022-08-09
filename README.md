@@ -16,6 +16,11 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
+# Commiting Format
+  in commit include date and time
+  in readme file menction about changes
+  
+  ![image](https://user-images.githubusercontent.com/66050989/183683618-e49b6f84-4375-47be-b39d-b254321c7e6f.png)
 
 
 
