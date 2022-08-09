@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 //@Repository
 public interface CareerRepo extends JpaRepository<Career, Long> {
     //find career by name
-    @Query(value = "select * from career.career where name = ?1", nativeQuery = true)
+    @Query(value = "select c from Career c where c.name=?1")
     Career findByCareerName(String careerName);
 }

@@ -1,5 +1,6 @@
 package com.example.carrerguidance.Controller;
 
+import com.example.carrerguidance.Model.Branch;
 import com.example.carrerguidance.Model.Domain;
 import com.example.carrerguidance.Model.OnlineCourses;
 
@@ -19,36 +20,31 @@ public class DomainController
     public DomainController(DomainService coursesService) {
         this.domainService = coursesService;
     }
-    @GetMapping("/api/Domain")
+    @GetMapping("/api/domain")
     public List<Domain> getAllCourses(){
         return domainService.getAllDomain();
     }
 
-    @GetMapping("/api/Domain/oc/{domainName}")
-    public List<OnlineCourses> getOnlineCoursesByDomainName(@PathVariable String domainName){
-        return domainService.getOnlineCoursesByDomain(domainName);
-    }
-    @GetMapping("/api/Domain/un/{domainName}")
-    public List<University> getUniversityByCourses(@PathVariable String domainName){
-        return domainService.getUniversityByDomain(domainName);
-    }
-    @GetMapping("/api/Domain/{id}")
+    @GetMapping("/api/domain/{id}")
     public Domain getDomainById(@PathVariable("id") long id){
         return domainService.getDomainById(id);
     }
-
-    @PutMapping({"/api/Domain/{id}"})
+    @GetMapping("/api/domain/br/{domain}")
+    public List<Branch> getBranchByDomain(@PathVariable("domain") String domain){
+        return domainService.getAllBranchesByDomainName(domain);
+    }
+    @PutMapping({"/api/domain/{id}"})
     public Domain updateCourses(@PathVariable("id") long id1,@RequestBody Domain courses){
         return domainService.updateDomain(courses, id1);
     }
 
-    @DeleteMapping("/api/courses/{id}")
+    @DeleteMapping("/api/domain/{id}")
     public void deleteCourses(@PathVariable("id") long id){
         domainService.deleteDomain(id);
     }
-    @PostMapping("/api/courses")
-    public Domain saveCourses(@RequestBody Domain courses){
-        return domainService.saveDomain(courses);
+    @PostMapping("/api/domain/")
+    public Domain saveCourses(@RequestBody Domain domain){
+        return domainService.saveDomain(domain);
     }
 
 }
