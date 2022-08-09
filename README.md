@@ -16,7 +16,9 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-
+# Commiting Format
+# in commit include date and time
+# in readme file menction about changes
 
 
 ### Date - 09/08/2022 Time 2:30 PM 6e227abb
