@@ -19,15 +19,6 @@ public class CareerController {
     public List<Career> getAllCareers(){
         return careerService.getAllCareer();
     }
-    //get interest object by a career name
-    @GetMapping("/cN/{careerName}")
-    public String getInterestsByCareerName(@PathVariable String careerName){
-       Interests interests=careerService.getInterestsByCareerName(careerName);
-       if(interests==null){
-           return "No interests found for career name: "+careerName;
-        }
-        return interests.getName();
-    }
 
     @GetMapping("{id}")
     public Career getCareerById(@PathVariable("id") long id){

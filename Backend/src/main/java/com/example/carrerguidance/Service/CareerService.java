@@ -11,5 +11,4 @@ public interface CareerService {
     Career getCareerById(long id);
     Career updateCareer(Career career, long id);
     void deleteCareer(long id);
-    Interests getInterestsByCareerName(String careerName);
 }

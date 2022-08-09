@@ -22,10 +22,6 @@ public class InterestsController {
     public List<Interests> getAllInterests(){
         return interestsService.getAllInterests();
     }
-    @GetMapping("/api/interests/c/{interestName}")
-    public List<Career> getCareersByInterests(@PathVariable String interestName){
-        return interestsService.getCareersByInterests(interestName);
-    }
     @GetMapping("/api/interests/dm/{interestName}")
     public List<Domain> getDomainByInterests(@PathVariable String interestName){
         return interestsService.getDomainByInterests(interestName);

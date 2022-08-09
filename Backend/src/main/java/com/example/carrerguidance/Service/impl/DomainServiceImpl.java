@@ -1,8 +1,7 @@
 package com.example.carrerguidance.Service.impl;
 
+import com.example.carrerguidance.Model.Branch;
 import com.example.carrerguidance.Model.Domain;
-import com.example.carrerguidance.Model.OnlineCourses;
-import com.example.carrerguidance.Model.University;
 import com.example.carrerguidance.Repository.DomainRepo;
 
 import com.example.carrerguidance.Service.DomainService;
@@ -50,17 +49,11 @@ public class DomainServiceImpl implements DomainService {
     }
 
     @Override
-    public List<OnlineCourses> getOnlineCoursesByDomain(String domainName) {
+    public List<Branch> getAllBranchesByDomainName(String domainName) {
          Domain byDomainName = domainRepo.findByDomainName(domainName);
-         if(byDomainName != null){
-             return byDomainName.getOnlineCourses();
+         if (byDomainName == null) {
+             return null;
          }
-            return null;
-    }
-
-
-    @Override
-    public List<University> getUniversityByDomain(String domainName) {
-        return null;
+            return byDomainName.getBranches();
     }
 }

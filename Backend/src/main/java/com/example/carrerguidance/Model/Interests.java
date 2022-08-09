@@ -28,11 +28,7 @@ public class Interests
     @Column(name = "id", nullable = false)
     private Long id;
     private String name;
-
-    @OneToMany(cascade = CascadeType.ALL)
-    @JsonManagedReference
-    @JsonProperty(  access = JsonProperty.Access.WRITE_ONLY)
-    private List<Career> career=new ArrayList<>();
+    private String imageUrl;
     @OneToMany(cascade = CascadeType.ALL)
     @JsonManagedReference
     @JsonProperty(  access = JsonProperty.Access.WRITE_ONLY)

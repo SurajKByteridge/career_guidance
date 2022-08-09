@@ -1,6 +1,9 @@
 package com.example.carrerguidance.Service.impl;
 
 import com.example.carrerguidance.Model.Branch;
+import com.example.carrerguidance.Model.Career;
+import com.example.carrerguidance.Model.OnlineCourses;
+import com.example.carrerguidance.Model.University;
 import com.example.carrerguidance.Repository.BranchRepo;
 import com.example.carrerguidance.Service.BranchService;
 import com.example.carrerguidance.exception.ResourceNotFoundException;
@@ -48,6 +51,33 @@ public class BranchServiceImpl implements BranchService {
     @Override
     public void deleteBranch(long id) {
         branchRepo.deleteById(id);
+    }
+
+    @Override
+    public List<OnlineCourses> getOnlineCoursesByBranchName(String branchName) {
+         Branch byName = branchRepo.findByName(branchName);
+         if (byName == null) {
+             return null;
+         }
+         return byName.getOnlineCourses();
+    }
+
+    @Override
+    public List<Career> getCareersByBranchName(String branchName) {
+        Branch byName = branchRepo.findByName(branchName);
+        if (byName == null) {
+            return null;
+        }
+        return byName.getCareers();
+    }
+
+    @Override
+    public List<University> getUniversitiesByBranchName(String branchName) {
+        Branch byName = branchRepo.findByName(branchName);
+        if (byName == null) {
+            return null;
+        }
+        return byName.getUniversities();
     }
 }
 
