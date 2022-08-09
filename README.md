@@ -18,7 +18,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-###Date - 09/08/2022 Time 2:30 PM
 
-####6e227abb 
-Changed application properties to connect with mariadb
+### Date - 09/08/2022 Time 2:30 PM 6e227abb
+
+[tarun-backend] Changed application properties to connect with mariadb
