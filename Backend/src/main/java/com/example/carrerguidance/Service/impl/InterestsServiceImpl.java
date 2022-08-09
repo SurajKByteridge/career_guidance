@@ -51,16 +51,6 @@ public class InterestsServiceImpl implements InterestsService {
         interestsRepo.deleteById(id);
     }
 
-    @Override
-    public List<Career> getCareersByInterests(String interests) {
-       //get interests by name
-        Interests i=interestsRepo.findByInterestName(interests);
-        if(i==null){
-            return null;
-        }
-        //get careers by interests
-        return i.getCareer();
-    }
 
     @Override
     public List<Domain> getDomainByInterests(String interestName) {

@@ -16,5 +16,7 @@ public class University {
     @Column(name = "id", nullable = false)
     private Long id;
     private String name;
-//    private String desc;
+    private String desc;
+    private String imageUrl;
+    private String siteUrl;
 }

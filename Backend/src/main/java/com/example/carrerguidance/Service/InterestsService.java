@@ -12,6 +12,5 @@ public interface InterestsService {
     Interests getInterestsById(long id);
     Interests updateInterests(Interests interests, long id);
     void deleteInterests(long id);
-    List<Career> getCareersByInterests(String interests);
     List<Domain> getDomainByInterests(String interestName);
 }

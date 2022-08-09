@@ -1,5 +1,6 @@
 package com.example.carrerguidance.Service;
 
+import com.example.carrerguidance.Model.Branch;
 import com.example.carrerguidance.Model.Domain;
 import com.example.carrerguidance.Model.OnlineCourses;
 import com.example.carrerguidance.Model.University;
@@ -12,6 +13,5 @@ public interface DomainService {
     Domain getDomainById(long id);
     Domain updateDomain(Domain domain, long id);
     void deleteDomain(long id);
-    List<OnlineCourses> getOnlineCoursesByDomain(String domainName);
-    List<University> getUniversityByDomain(String domainName);
+    List<Branch> getAllBranchesByDomainName(String domainName);
 }

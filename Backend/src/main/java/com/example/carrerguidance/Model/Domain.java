@@ -21,20 +21,13 @@ public class Domain {
     @Column(name = "id", nullable = false)
     private Long id;
     private String name;
-    private String duration;
     private String exams;
-    private String imageUrl;
-    private String description;
     @ManyToOne
     @JsonBackReference
     private Interests interests;
     @OneToMany(cascade = CascadeType.ALL)
     @JsonManagedReference
     @JsonProperty(  access = JsonProperty.Access.WRITE_ONLY)
-    private List<OnlineCourses> onlineCourses = new ArrayList<>();
-//    @OneToMany(cascade = CascadeType.ALL)
-////    @JsonManagedReference
-//    @JsonProperty(  access = JsonProperty.Access.WRITE_ONLY)
-//    private List<University> uni = new ArrayList<>();
+    private List<Branch> branches = new ArrayList<>();
 
 }
