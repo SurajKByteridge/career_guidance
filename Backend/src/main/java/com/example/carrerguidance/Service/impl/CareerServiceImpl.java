@@ -7,7 +7,6 @@ import com.example.carrerguidance.Service.CareerService;
 import com.example.carrerguidance.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-;
 
 import java.util.List;
 
