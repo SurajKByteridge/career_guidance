@@ -31,7 +31,9 @@ class HomeScreen extends StatelessWidget {
                   text: "Explore\nCareers\nafter 12th",
                   height: 160,
                   icon: Icons.donut_small_rounded,
-                  onPressed: () {}),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/explore');
+                  }),
             ],
           ),
           const SizedBox(height: 40),
