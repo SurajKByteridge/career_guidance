@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:career_guidance/widget/scaffold.dart';
 import 'package:career_guidance/widget/text.dart';
-import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -43,7 +42,7 @@ class InterestsScreen extends StatelessWidget {
                           imageUrl:
                               "https://prod-discovery.edx-cdn.org/media/course/image/0e575a39-da1e-4e33-bb3b-e96cc6ffc58e-8372a9a276c1.small.png",
                           placeholder: (context, url) =>
-                              const CircularProgressIndicator(),
+                              const Center(child: CircularProgressIndicator()),
                         ),
                         Container(
                           height: (i % 1.5 + 1) * 100,
@@ -66,7 +65,9 @@ class InterestsScreen extends StatelessWidget {
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(3)),
                             splashColor: CGTheme.accentColor.withOpacity(0.3),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, "/domain");
+                            },
                           ),
                         ),
                       ],
