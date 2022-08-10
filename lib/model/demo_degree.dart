@@ -24,6 +24,26 @@ class DemoDomain {
       text: "B.A",
     ),
   ];
+  static List<Tab> tabs2 = [
+    const Tab(
+      text: "MPC",
+    ),
+    const Tab(
+      text: "BiPC",
+    ),
+    const Tab(
+      text: "HEC",
+    ),
+    const Tab(
+      text: "CEC",
+    ),
+    const Tab(
+      text: "CEC",
+    ),
+    const Tab(
+      text: "CEC",
+    ),
+  ];
   static List<Widget> tabviews = List.generate(
     6,
     (index) => SingleChildScrollView(
@@ -114,6 +134,55 @@ class DemoDomain {
               children: [
                 CGCard.getBranchCard(
                     branchName: "Automobile Engineering",
+                    duration: "4 Years",
+                    height: 100,
+                    onPressed: () {},
+                    imgurl: ''),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+  static List<Widget> tabviews2 = List.generate(
+    6,
+    (index) => SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Row(
+              children: [
+                CGCard.getBranchCard(
+                    branchName: "Bachelor of technology",
+                    duration: "4 Years",
+                    height: 100,
+                    onPressed: () {},
+                    imgurl: ''),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Row(
+              children: [
+                CGCard.getBranchCard(
+                    branchName: "Bachelor of Architecture",
+                    duration: "4 Years",
+                    height: 100,
+                    onPressed: () {},
+                    imgurl: ''),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Row(
+              children: [
+                CGCard.getBranchCard(
+                    branchName: "Bachelor in Pharmacy",
                     duration: "4 Years",
                     height: 100,
                     onPressed: () {},

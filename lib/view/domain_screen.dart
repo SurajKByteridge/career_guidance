@@ -1,9 +1,7 @@
 import 'package:career_guidance/model/demo_degree.dart';
 import 'package:career_guidance/widget/scaffold.dart';
-import 'package:career_guidance/widget/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../widget/text.dart';
 
 class DomainScreen extends StatelessWidget {
@@ -29,22 +27,21 @@ class DomainScreen extends StatelessWidget {
                   automaticallyImplyLeading: false,
                   backgroundColor: Colors.transparent,
                   bottom: TabBar(
-                    isScrollable: true,
-                    labelStyle: GoogleFonts.philosopher(
-                        fontWeight: FontWeight.bold, fontSize: 18),
-                    indicator: BoxDecoration(
-                      // border: Border.all(color: CGTheme.accentColor,width: 3),
-                      color: const Color(0xFF2F8A5F),
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                    tabs: DemoDomain.tabs
-                  ),
+                      isScrollable: true,
+                      labelStyle: GoogleFonts.philosopher(
+                          fontWeight: FontWeight.bold, fontSize: 18),
+                      indicator: BoxDecoration(
+                        // border: Border.all(color: CGTheme.accentColor,width: 3),
+                        color: const Color(0xFF2F8A5F),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      tabs: DemoDomain.tabs),
                 ),
                 body: Padding(
-                  padding: const EdgeInsets.only(top:10.0),
+                  padding: const EdgeInsets.only(top: 10.0),
                   child: TabBarView(
-                    children: DemoDomain.tabviews
-                  ),
+                      physics: const BouncingScrollPhysics(),
+                      children: DemoDomain.tabviews),
                 ),
               )),
         )

@@ -1,3 +1,4 @@
+[suraj] added Explore Screen with dummy data
 [suraj] added Domain Screen with dummy data
 [suraj] added HomeScreen and Interests Screen
 
