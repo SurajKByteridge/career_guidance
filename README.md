@@ -1,4 +1,5 @@
-### [suraj] added HomeScreen and Interests Screen
+[suraj] added Domain Screen with dummy data
+[suraj] added HomeScreen and Interests Screen
 
 # Commiting Format
   in commit include date and time
